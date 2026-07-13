@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouzinElegancia — La plateforme complète du e-commerce algérien</title>
+<meta name="description" content="YouzinElegancia gère votre boutique, vos commandes, votre équipe et vos livraisons depuis un seul tableau de bord.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark">Y</span>
+      <span class="brand-name">YouzinElegancia</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#dashboard">Tableau de bord</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#produits">Produits</a>
+      <a href="#commandes">Commandes</a>
+      <a href="#equipe">Équipe</a>
+      <a href="#rapports">Rapports</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#cta" class="btn btn-ghost">Se connecter</a>
+      <a href="#cta" class="btn btn-primary">S'inscrire</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-lines"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">Plateforme SaaS 🇩🇿 pour le e-commerce</p>
+      <h1 class="hero-title reveal">
+        Pilotez toute votre <span class="text-gradient">boutique en ligne</span> depuis un seul écran.
+      </h1>
+      <p class="hero-sub reveal">
+        De la création de la boutique jusqu'à la livraison au client : produits, commandes, équipe, marketing et finances — YouzinElegancia connecte chaque étape de votre vente en temps réel.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#cta" class="btn btn-primary btn-lg">Créer ma boutique gratuitement</a>
+        <a href="#dashboard" class="btn btn-outline btn-lg">
+          <span class="play-dot"></span> Découvrir la plateforme
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="hero-stat">
+          <span class="stat-num" data-count="57">0</span>
+          <span class="stat-label">commandes suivies en direct</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="45" data-suffix=".6%">0</span>
+          <span class="stat-label">taux de conversion moyen</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="4" data-suffix=" sources">0</span>
+          <span class="stat-label">Facebook, Instagram, TikTok, Google</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <div class="browser-url">app.youzinelegancia.com</div>
+        </div>
+        <div class="browser-body">
+          <img src="tableau-de-bord-bureau.png" alt="Tableau de bord YouzinElegancia" class="slide active" data-slide="0">
+          <img src="gestion-produits-bureau.png" alt="Gestion des produits YouzinElegancia" class="slide" data-slide="1">
+          <img src="gestion-commandes-bureau.png" alt="Gestion des commandes YouzinElegancia" class="slide" data-slide="2">
+        </div>
+      </div>
+      <div class="float-card float-card-1">
+        <span class="float-icon">📦</span>
+        <div><strong>En stock (148)</strong><small>Adidas Ballon Tango</small></div>
+      </div>
+      <div class="float-card float-card-2">
+        <span class="float-icon success">✓</span>
+        <div><strong>Commande #57 confirmée</strong><small>Tlemcen · Beni Boussaid</small></div>
+      </div>
+      <div class="slide-dots">
+        <button class="sdot active" data-goto="0"></button>
+        <button class="sdot" data-goto="1"></button>
+        <button class="sdot" data-goto="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGOS / SOURCES BAR ============ -->
+<section class="marquee-wrap">
+  <p class="marquee-label">Toutes vos sources de commandes, réunies au même endroit</p>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Facebook</span><span>Instagram</span><span>TikTok</span><span>Snapchat</span><span>Google</span><span>WhatsApp</span><span>Vente directe</span>
+      <span>Facebook</span><span>Instagram</span><span>TikTok</span><span>Snapchat</span><span>Google</span><span>WhatsApp</span><span>Vente directe</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD (flagship) ============ -->
+<section class="section" id="dashboard">
+  <div class="section-inner split split-reverse">
+    <div class="split-visual reveal">
+      <div class="switcher" data-switcher>
+        <div class="switcher-tabs">
+          <button class="switch-tab active" data-view="desktop">🖥️ Bureau</button>
+          <button class="switch-tab" data-view="mobile">📱 Mobile</button>
+        </div>
+        <div class="switcher-stage">
+          <div class="switch-frame frame-desktop active" data-view-panel="desktop">
+            <div class="device-shell"><img src="tableau-de-bord-bureau.png" alt="Tableau de bord bureau"></div>
+          </div>
+          <div class="switch-frame frame-mobile" data-view-panel="mobile">
+            <div class="device-shell phone"><img src="tableau-de-bord-mobile.png" alt="Tableau de bord mobile"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="split-copy">
+      <p class="eyebrow reveal">Le cœur de la plateforme</p>
+      <h2 class="reveal">Un tableau de bord qui vous montre <em>tout</em>, en direct.</h2>
+      <p class="reveal">Commandes du jour, alertes de stock, actions rapides pour ajouter un produit ou un confirmateur : votre journée de travail commence ici, sans avoir à chercher l'information.</p>
+      <ul class="check-list reveal">
+        <li>Statistiques en direct — aujourd'hui, hier, 7 jours, 30 jours</li>
+        <li>Alertes automatiques de rupture de stock</li>
+        <li>Actions rapides : produit, commande, équipe, export CSV</li>
+        <li>Interface identique sur bureau, tablette et mobile</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOUTIQUE & LANDING PAGES ============ -->
+<section class="section section-tint" id="boutique">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Créez, personnalisez, lancez</p>
+      <h2>Votre boutique et vos pages de vente, prêtes en quelques minutes.</h2>
+      <p class="section-lead">Un moteur de boutique pensé pour le marché algérien : rapide, bilingue, et prêt pour vos campagnes publicitaires.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon">🛍️</span>
+        <h3>Boutiques en ligne</h3>
+        <p>Créez plusieurs boutiques, personnalisez votre identité visuelle et vos pages — en arabe et en français, avec un design responsive et rapide.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🎨</span>
+        <h3>Pages d'atterrissage</h3>
+        <p>Plus de 10 modèles professionnels, entièrement personnalisables pour vos publicités Facebook, Instagram ou TikTok.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📈</span>
+        <h3>Analyse de conversion</h3>
+        <p>Comparez vos pages, suivez visiteurs et visites, et identifiez immédiatement la page qui convertit le mieux.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARKETING & TRACKING ============ -->
+<section class="section" id="marketing">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Suivez chaque clic, chaque vente</p>
+      <h2>Vos publicités, mesurées jusqu'au dernier centime.</h2>
+      <p class="section-lead">Connectez vos pixels une fois, et laissez YouzinElegancia relier chaque commande à la campagne qui l'a générée.</p>
+    </div>
+    <div class="feature-grid feature-grid-4">
+      <div class="feature-card reveal">
+        <span class="feature-icon">📘</span>
+        <h3>Meta Pixel</h3>
+        <p>Suivi complet des campagnes Facebook et Instagram, jusqu'à la conversion finale.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🎵</span>
+        <h3>TikTok &amp; Snapchat Pixel</h3>
+        <p>Mesurez vos publicités TikTok Ads et Snapchat Ads directement depuis votre boutique.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📉</span>
+        <h3>Google Analytics</h3>
+        <p>Un pixel par boutique, ou un pixel par produit, selon la précision dont vous avez besoin.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🎯</span>
+        <h3>Suivi des conversions</h3>
+        <p>Événements, conversions et performance de campagne analysés automatiquement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUITS ============ -->
+<section class="section section-tint" id="produits">
+  <div class="section-inner split">
+    <div class="split-copy">
+      <p class="eyebrow reveal">Catalogue &amp; stock</p>
+      <h2 class="reveal">Chaque produit, suivi jusqu'à la dernière unité.</h2>
+      <p class="reveal">Prix avant/après réduction, SKU, catégories, marques, gestion FIFO du stock : YouzinElegancia affiche tout ce qu'il faut savoir, d'un seul coup d'œil.</p>
+      <ul class="check-list reveal">
+        <li>Photos multiples, variantes, catégories et marques</li>
+        <li>Alertes automatiques de rupture de stock</li>
+        <li>Vues, visiteurs et statistiques par produit</li>
+        <li>Export CSV et mise à jour groupée</li>
+      </ul>
+    </div>
+    <div class="split-visual reveal">
+      <div class="switcher" data-switcher>
+        <div class="switcher-tabs">
+          <button class="switch-tab active" data-view="desktop">🖥️ Bureau</button>
+          <button class="switch-tab" data-view="mobile">📱 Mobile</button>
+        </div>
+        <div class="switcher-stage">
+          <div class="switch-frame frame-desktop active" data-view-panel="desktop">
+            <div class="device-shell"><img src="gestion-produits-bureau.png" alt="Gestion des produits bureau"></div>
+          </div>
+          <div class="switch-frame frame-mobile" data-view-panel="mobile">
+            <div class="device-shell phone"><img src="gestion-produits-mobile.png" alt="Gestion des produits mobile"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMANDES ============ -->
+<section class="section" id="commandes">
+  <div class="section-inner split split-reverse">
+    <div class="split-visual reveal">
+      <div class="switcher" data-switcher>
+        <div class="switcher-tabs">
+          <button class="switch-tab active" data-view="desktop">🖥️ Bureau</button>
+          <button class="switch-tab" data-view="mobile">📱 Mobile</button>
+        </div>
+        <div class="switcher-stage">
+          <div class="switch-frame frame-desktop active" data-view-panel="desktop">
+            <div class="device-shell"><img src="gestion-commandes-bureau.png" alt="Gestion des commandes bureau"></div>
+          </div>
+          <div class="switch-frame frame-mobile" data-view-panel="mobile">
+            <div class="device-shell phone"><img src="gestion-commandes-mobile.png" alt="Gestion des commandes mobile"></div>
+          </div>
+        </div>
+        <div class="switcher-caption">
+          <img src="menu-commandes.png" alt="Menu des commandes" class="caption-thumb">
+          <span>Badge en temps réel du nombre de commandes, visible partout dans le menu</span>
+        </div>
+      </div>
+    </div>
+    <div class="split-copy">
+      <p class="eyebrow reveal">De la réception à la livraison</p>
+      <h2 class="reveal">Toutes vos commandes, quelle que soit leur origine.</h2>
+      <p class="reveal">Facebook, Instagram, TikTok, Snapchat, Google, WhatsApp ou vente directe : chaque commande arrive avec sa source, son statut et son historique complet.</p>
+      <ul class="check-list reveal">
+        <li>Filtres avancés : produit, statut, wilaya, source</li>
+        <li>Appel, copie et changement de statut en un clic</li>
+        <li>Paniers abandonnés et commandes récupérées</li>
+        <li>Numéros et tentatives bloqués automatiquement</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVRAISON ============ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Connectée à vos transporteurs</p>
+      <h2>La livraison, gérée sans quitter votre commande.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon">🚚</span>
+        <h3>Sociétés de livraison</h3>
+        <p>Connexion directe : créez et envoyez vos colis, suivez chaque livraison sans changer d'outil.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🗺️</span>
+        <h3>Tarifs par wilaya</h3>
+        <p>Tarifs officiels ou personnalisés, par wilaya et par commune, ajustables selon votre stratégie.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🔁</span>
+        <h3>Multi-transporteurs</h3>
+        <p>Travaillez avec plusieurs sociétés de livraison à la fois, selon la zone ou le client.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EQUIPE + MESSAGERIE ============ -->
+<section class="section section-tint" id="equipe">
+  <div class="section-inner split">
+    <div class="split-copy">
+      <p class="eyebrow reveal">Travail d'équipe</p>
+      <h2 class="reveal">Confirmateurs, opérateurs : chacun sait quoi faire.</h2>
+      <p class="reveal">Distribuez les produits ou les commandes, suivez la productivité de chaque membre, et gardez toute la communication au même endroit — liée directement au numéro de commande.</p>
+      <ul class="check-list reveal">
+        <li>Distribution des produits par employé</li>
+        <li>Rapports de performance individuels</li>
+        <li>Messagerie interne liée aux commandes (#numéro)</li>
+        <li>Notifications instantanées, sans surprise</li>
+      </ul>
+    </div>
+    <div class="split-visual reveal">
+      <div class="device-frame device-mobile device-mobile-center">
+        <img src="messagerie-interne.png" alt="Messagerie interne YouzinElegancia">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RAPPORTS / FINANCE / SECURITE ============ -->
+<section class="section" id="rapports">
+  <div class="section-inner split split-reverse">
+    <div class="split-visual reveal">
+      <div class="device-frame device-tiny">
+        <img src="menu-rapports.png" alt="Menu rapports YouzinElegancia">
+      </div>
+    </div>
+    <div class="split-copy">
+      <p class="eyebrow reveal">Décider avec des chiffres, pas des impressions</p>
+      <h2 class="reveal">Rapports, finances et sécurité, réunis.</h2>
+      <p class="reveal">Performance de l'équipe, des pages d'atterrissage, du stock ou des commandes : chaque rapport est prêt en un clic, avec les graphiques qui vont avec.</p>
+    </div>
+  </div>
+
+  <div class="section-inner">
+    <h3 class="group-title reveal">Finances &amp; analytique</h3>
+    <div class="feature-grid feature-grid-4">
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">💰</span>
+        <h3>Finances</h3>
+        <p>Revenus, dépenses et bénéfices suivis en temps réel.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">📊</span>
+        <h3>KPIs &amp; graphiques</h3>
+        <p>Tous vos indicateurs clés visualisés instantanément.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🏆</span>
+        <h3>Meilleures ventes</h3>
+        <p>Produits, pages et sources les plus performants.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">📅</span>
+        <h3>Commandes dans le temps</h3>
+        <p>Suivi journalier et mensuel de votre activité.</p>
+      </div>
+    </div>
+
+    <h3 class="group-title reveal">Clients &amp; recouvrement</h3>
+    <div class="feature-grid feature-grid-4">
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">👤</span>
+        <h3>Historique clients</h3>
+        <p>Notation et historique complet de chaque client.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🚫</span>
+        <h3>Numéros bloqués</h3>
+        <p>Bloquez les clients à risque en un clic.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🛒</span>
+        <h3>Paniers abandonnés</h3>
+        <p>Repérez et relancez les commandes non finalisées.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">♻️</span>
+        <h3>Commandes récupérées</h3>
+        <p>Statistiques précises sur vos ventes sauvées.</p>
+      </div>
+    </div>
+
+    <h3 class="group-title reveal">Sécurité &amp; notifications</h3>
+    <div class="feature-grid feature-grid-4">
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🔒</span>
+        <h3>OTP &amp; anti-bot</h3>
+        <p>Vérification par code et blocage des robots.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🛡️</span>
+        <h3>Anti-spam</h3>
+        <p>Commandes suspectes et tentatives bloquées filtrées automatiquement.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🔔</span>
+        <h3>Notifications instantanées</h3>
+        <p>Stock, commandes, messages et pages — en direct.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🔐</span>
+        <h3>Protection des données</h3>
+        <p>Comptes et informations clients sécurisés par défaut.</p>
+      </div>
+    </div>
+
+    <h3 class="group-title reveal">Outils &amp; multi-appareils</h3>
+    <div class="feature-grid feature-grid-4">
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">📤</span>
+        <h3>Export CSV</h3>
+        <p>Vos données produits et commandes, en un clic.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">🧭</span>
+        <h3>Guide interactif</h3>
+        <p>Un tutoriel intégré à chaque page pour apprendre vite.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">⚡</span>
+        <h3>Actions rapides</h3>
+        <p>Moins de clics pour les tâches de tous les jours.</p>
+      </div>
+      <div class="feature-card compact reveal">
+        <span class="feature-icon">👥</span>
+        <h3>Multi-utilisateurs</h3>
+        <p>Toute votre équipe, sur une seule plateforme SaaS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESPONSIVE / UX SHOWCASE ============ -->
+<section class="section section-dark">
+  <div class="section-inner">
+    <div class="section-head reveal center">
+      <p class="eyebrow">Une seule expérience, tous les écrans</p>
+      <h2>Bureau ou mobile : votre activité tient dans votre poche.</h2>
+      <p class="section-lead">Aucune version « allégée ». La même puissance, la même clarté, que vous soyez au bureau ou en déplacement.</p>
+    </div>
+    <div class="device-compare reveal">
+      <div class="device-frame device-desktop device-compare-desktop">
+        <img src="tableau-de-bord-bureau.png" alt="Version bureau">
+      </div>
+      <div class="device-frame device-mobile device-compare-mobile">
+        <img src="tableau-de-bord-mobile.png" alt="Version mobile">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="cta">
+  <div class="blob blob-3"></div>
+  <div class="cta-inner reveal">
+    <h2>Prêt à gérer votre e-commerce depuis un seul endroit ?</h2>
+    <p>Créez votre boutique, connectez vos réseaux et recevez votre première commande aujourd'hui.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-primary btn-lg">S'inscrire gratuitement</a>
+      <a href="#" class="btn btn-outline btn-lg cta-login">Se connecter</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">Y</span>
+      <span class="brand-name">YouzinElegancia</span>
+    </div>
+    <p class="footer-tag">La plateforme SaaS algérienne du e-commerce, de la boutique à la livraison.</p>
+    <div class="footer-links">
+      <a href="#boutique">Boutique</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#produits">Produits</a>
+      <a href="#commandes">Commandes</a>
+      <a href="#equipe">Équipe</a>
+      <a href="#rapports">Rapports</a>
+    </div>
+    <p class="footer-copy">© 2026 YouzinElegancia. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
